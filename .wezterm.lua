@@ -3,7 +3,7 @@ local config = wezterm.config_builder()
 
 config.color_scheme = 'zenbones_dark'
 config.font = wezterm.font('FiraCode Nerd Font', { weight = 'Regular' })
-config.font_size = 29
+config.font_size = 19
 
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_max_width = 32
