@@ -1,0 +1,12 @@
+#!/bin/sh
+
+link() { 
+  if [[ -f "$HOME/dotfiles/$1" ]] || [[ -d "$HOME/dotfiles/$1" ]]; then
+    ln -s "$HOME/dotfiles/$1" "$HOME/$1"
+  else
+    echo "$1 does not exist"
+  fi
+}
+
+link .wezterm.lua
+link .alacritty.toml
