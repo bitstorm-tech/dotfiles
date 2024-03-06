@@ -90,6 +90,8 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.filetype.add { extension = { templ = 'templ' } }
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -149,7 +151,7 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 20
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -189,6 +191,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.keymap.set('n', '<space>o', 'o<Esc>', { desc = 'New line below' })
 vim.keymap.set('n', '<space>O', 'O<Esc>', { desc = 'New line below' })
+vim.keymap.set('n', '<space>gg', ':LazyGit<cr>', { desc = 'Open LazyGit' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -538,10 +542,17 @@ require('lazy').setup {
       local servers = {
         -- clangd = {},
         gopls = {},
-        templ = {},
-        htmx = {},
+        templ = {
+          filetypes = { 'templ' },
+        },
+        htmx = {
+          filetypes = { 'html', 'templ' },
+        },
         html = {
           filetypes = { 'html', 'templ' },
+        },
+        tsserver = {
+          filetypes = { 'html', 'js', 'ts' },
         },
         -- pyright = {},
         -- rust_analyzer = {},
@@ -629,7 +640,7 @@ require('lazy').setup {
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
-        -- javascript = { { "prettierd", "prettier" } },
+        javascript = { { 'prettierd', 'prettier' } },
       },
     },
   },
@@ -830,4 +841,4 @@ require('lazy').setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-require 'snippets'
+require 'custom.snippets'

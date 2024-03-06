@@ -27,4 +27,8 @@ return {
       require('auto-session').setup()
     end,
   },
+  {
+    'kdheepak/lazygit.nvim',
+    lazy = false,
+  },
 }
