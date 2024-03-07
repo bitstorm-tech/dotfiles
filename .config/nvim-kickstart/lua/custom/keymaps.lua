@@ -33,6 +33,6 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.keymap.set('n', '<space>o', 'o<Esc>', { desc = 'New line below' })
 vim.keymap.set('n', '<space>O', 'O<Esc>', { desc = 'New line below' })
-vim.keymap.set('n', '<space>gg', ':LazyGit<cr>', { desc = 'Open LazyGit' })
+vim.keymap.set('n', '<space>lg', ':LazyGit<cr>', { desc = 'Open LazyGit' })
 vim.keymap.set('n', '<space>E', ':Explore<cr>', { desc = 'Open file [e]xplorer' })
 vim.keymap.set('n', '<space>x', ':bw<cr>', { desc = 'Close current buffer' })
