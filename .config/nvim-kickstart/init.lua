@@ -1,7 +1,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-require 'custom.autocmd'
+vim.filetype.add { extension = { templ = 'templ' } }
+-- require 'custom.autocmd'
 require 'custom.options'
 require 'custom.keymaps'
 
@@ -38,7 +39,7 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup {
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  -- 'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -455,8 +456,6 @@ require('lazy').setup {
         html = { 'prettier' },
         json = { 'prettier' },
         typescript = { 'prettier' },
-
-        -- sh = { "shfmt" },
         go = { 'gopls' },
         templ = { 'templ', 'prettier' },
         yaml = { 'yamlls' },
@@ -645,7 +644,5 @@ require('lazy').setup {
   { import = 'custom.plugins' },
 }
 
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
 require 'custom.snippets'
 vim.cmd.colorscheme 'carbonfox'
