@@ -358,8 +358,12 @@ require('lazy').setup {
         html = {
           filetypes = { 'html', 'templ' },
         },
-        tsserver = {
-          filetypes = { 'html', 'js', 'ts' },
+        tsserver = {},
+        cssls = {
+          filetypes = { 'html', 'templ' },
+        },
+        eslint = {
+          filetypes = { 'html', 'ts', 'js' },
         },
         -- pyright = {},
         -- rust_analyzer = {},
@@ -436,18 +440,28 @@ require('lazy').setup {
     opts = {
       notify_on_error = false,
       format_on_save = {
-        timeout_ms = 500,
+        timeout_ms = 1000,
         lsp_fallback = true,
       },
       formatters_by_ft = {
         lua = { 'stylua' },
-        go = { 'gopls' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
         javascript = { { 'prettierd', 'prettier' } },
+        css = { 'prettier' },
+        html = { 'prettier' },
+        json = { 'prettier' },
+        typescript = { 'prettier' },
+
+        -- sh = { "shfmt" },
+        go = { 'gopls' },
+        templ = { 'templ', 'prettier' },
+        yaml = { 'yamlls' },
+        yml = { 'yamlls' },
+        sh = { 'bashls' },
       },
     },
   },
