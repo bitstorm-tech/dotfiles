@@ -1,12 +1,10 @@
 format = """
 [░▒▓](#a3aed2)\
 $directory\
-[](fg:#769ff0 bg:#394260)\
+(fg:#769ff0 bg:#394260)\
 $git_branch\
 $git_status\
 [](fg:#394260 bg:#212736)\
-$time\
-[ ](fg:#1d2230)\
 \n$character"""
 
 command_timeout = 5000
