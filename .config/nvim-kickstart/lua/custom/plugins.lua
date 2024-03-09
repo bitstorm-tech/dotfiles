@@ -4,9 +4,6 @@ return {
     lazy = false,
     event = 'VeryLazy',
     opts = {},
-    config = function()
-      require('noice').setup {}
-    end,
     dependencies = {
       'MunifTanjim/nui.nvim',
       'rcarriga/nvim-notify',
@@ -19,7 +16,6 @@ return {
   },
   {
     'kdheepak/lazygit.nvim',
-    lazy = false,
   },
   {
     'nvim-lualine/lualine.nvim',
