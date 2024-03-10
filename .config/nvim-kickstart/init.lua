@@ -5,6 +5,7 @@ vim.filetype.add { extension = { templ = 'templ' } }
 -- require 'custom.autocmd'
 require 'custom.options'
 require 'custom.keymaps'
+require 'custom.commands'
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
