@@ -12,6 +12,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias vi='nvim'
+alias c='clear'
 alias gomodup='go get -u ./... && go mod tidy'
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
