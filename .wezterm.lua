@@ -2,10 +2,10 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.color_scheme = "zenbones_dark"
--- config.font = wezterm.font('FiraCode Nerd Font', { weight = 'Regular' })
+config.font = wezterm.font("FiraCode Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Light" })
-config.font = wezterm.font("UbuntuMono Nerd Font", { weight = "Regular" })
-config.font_size = 22
+-- config.font = wezterm.font("UbuntuMono Nerd Font", { weight = "Regular" })
+config.font_size = 19
 
 config.audible_bell = "Disabled"
 config.hide_tab_bar_if_only_one_tab = true
