@@ -50,3 +50,4 @@
 ;; (unpin! t)
 
 (package! evil-terminal-cursor-changer)
+(package! templ-ts-mode)
