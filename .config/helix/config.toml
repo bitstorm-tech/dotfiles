@@ -1,0 +1,5 @@
+theme = "Onedark"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
