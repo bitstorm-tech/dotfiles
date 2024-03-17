@@ -76,3 +76,10 @@
 ;; they are implemented.
 (use-package! evil-terminal-cursor-changer
   :hook (tty-setup . evil-terminal-cursor-changer-activate))
+
+(setq auto-save-default t
+      make-backup-files t)
+
+(setq confirm-kill-emacs nil)
+
+(setq global-hl-line-modes nil)
