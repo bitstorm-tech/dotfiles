@@ -1,0 +1,19 @@
+[language-server.angular]
+command = "ngserver"
+args = [
+  "--stdio",
+  "--tsProbeLocations",
+  "$(npm -g root)/typescript/lib",
+  "--ngProbeLocations",
+  "$(npm -g root)/@angular/language-server/bin",
+]
+
+[[language]]
+name ="html"
+roots = ["angular.json"]
+language-servers = ["angular","vscode-html-language-server"]
+
+[[language]]
+name = "typescript"
+roots = ["tsconfig.json"]
+language-servers = ["angular","typescript-language-server"]
