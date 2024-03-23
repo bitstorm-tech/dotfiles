@@ -11,9 +11,20 @@ args = [
 [[language]]
 name ="html"
 roots = ["angular.json"]
-language-servers = ["angular","vscode-html-language-server"]
+language-servers = ["angular","vscode-html-language-server", "tailwindcss-ls"]
 
 [[language]]
 name = "typescript"
 roots = ["tsconfig.json"]
 language-servers = ["angular","typescript-language-server"]
+
+[[language]]
+name = "templ"
+file-types = ["templ"]
+roots = ["go.mod"]
+language-servers = ["templ", "vscode-html-language-server", "tailwindcss-ls", "typescript-language-server"]
+formatter = { command = "templ", args = ["fmt"]}
+
+[[language]]
+name = "svelte"
+language-servers = ["svelteserver", "tailwindcss-ls", "typescript-language-server"]
