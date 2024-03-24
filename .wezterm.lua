@@ -5,7 +5,7 @@ config.color_scheme = "zenbones_dark"
 config.font = wezterm.font("FiraCode Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Light" })
 -- config.font = wezterm.font("UbuntuMono Nerd Font", { weight = "Regular" })
-config.font_size = 19
+config.font_size = 18
 
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.audible_bell = "Disabled"
