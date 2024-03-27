@@ -8,9 +8,7 @@ import = [
 # normal = { family = "JetBrainsMono Nerd Font", style = "Light" }
 # normal = { family = "FiraCode Nerd Font", style = "Light" }
 normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
-size = 18 
-# offset = { y = 4 }
-# glyph_offset = { y = 2 }
+size = 20 
 
 [cursor]
 style = { shape = "Block" }
