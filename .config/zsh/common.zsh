@@ -13,9 +13,10 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias vi='nvim'
 alias c='clear'
-alias gomodup='go get -u ./... && go mod tidy'
-alias brewup='brew upgrade && brew cleanup && brew autoremove'
 alias e='emacs'
+
+function gomodup { go get -u ./...; go mod tidy }
+function brewup { brew upgrade; brew cleanup; brew autoremove }
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(zoxide init --cmd cd zsh)"
