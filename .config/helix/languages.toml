@@ -22,7 +22,7 @@ language-servers = ["angular","typescript-language-server"]
 name = "templ"
 file-types = ["templ"]
 roots = ["go.mod"]
-language-servers = ["templ", "vscode-html-language-server", "tailwindcss-ls", "typescript-language-server"]
+language-servers = ["templ", "vscode-html-language-server", "tailwindcss-ls", "typescript-language-server", "gopls"]
 formatter = { command = "templ", args = ["fmt"]}
 
 [[language]]
