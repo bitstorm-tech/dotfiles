@@ -1,7 +1,8 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.color_scheme = "zenbones_dark"
+-- config.color_scheme = "zenbones_dark"
+config.color_scheme = 'Tokyo Night Day'
 config.font = wezterm.font("FiraCode Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Light" })
 -- config.font = wezterm.font("UbuntuMono Nerd Font", { weight = "Regular" })
