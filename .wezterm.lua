@@ -1,12 +1,12 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
--- config.color_scheme = "zenbones_dark"
-config.color_scheme = 'Tokyo Night Day'
-config.font = wezterm.font("FiraCode Nerd Font", { weight = "Regular" })
--- config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Light" })
+config.color_scheme = "zenbones_dark"
+-- config.color_scheme = 'Tokyo Night Day'
+-- config.font = wezterm.font("FiraCode Nerd Font", { weight = "Regular" })
+config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("UbuntuMono Nerd Font", { weight = "Regular" })
-config.font_size = 18
+config.font_size = 17
 
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.audible_bell = "Disabled"
