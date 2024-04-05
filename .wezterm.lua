@@ -8,11 +8,11 @@ config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("UbuntuMono Nerd Font", { weight = "Regular" })
 config.font_size = 17
 
-config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.audible_bell = "Disabled"
 config.hide_tab_bar_if_only_one_tab = true
-config.tab_max_width = 32
-config.use_fancy_tab_bar = false
+config.tab_max_width = 64
+-- config.use_fancy_tab_bar = false
 config.enable_scroll_bar = false
 config.window_padding = {
 	left = 0,
