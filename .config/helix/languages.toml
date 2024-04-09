@@ -3,9 +3,9 @@ command = "ngserver"
 args = [
   "--stdio",
   "--tsProbeLocations",
-  "$(npm -g root)/typescript/lib",
+  "$HOME/.bun/bin",
   "--ngProbeLocations",
-  "$(npm -g root)/@angular/language-server/bin",
+  "$HOME/.bun/bin",
 ]
 
 [[language]]
