@@ -1,8 +1,13 @@
 theme = "gruvbox_light"
 
+[editor]
+line-number = "relative"
+bufferline = "multiple"
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 
 [keys.normal]
 C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+esc = ["collapse_selection", "keep_primary_selection"]
