@@ -8,10 +8,14 @@ args = [
   "$HOME/.bun/bin",
 ]
 
+[language-server.emmet-ls]
+command = "emmet-ls"
+args = [ "--stdio" ]
+
 [[language]]
 name ="html"
 roots = ["angular.json"]
-language-servers = ["angular","vscode-html-language-server", "tailwindcss-ls"]
+language-servers = ["angular", "vscode-html-language-server", "tailwindcss-ls", "emmet-ls"]
 
 [[language]]
 name = "typescript"
@@ -22,9 +26,14 @@ language-servers = ["angular","typescript-language-server"]
 name = "templ"
 file-types = ["templ"]
 roots = ["go.mod"]
-language-servers = ["templ", "vscode-html-language-server", "tailwindcss-ls", "typescript-language-server", "gopls"]
+language-servers = ["templ", "tailwindcss-ls", "vscode-html-language-server", "typescript-language-server", "gopls", "emmet-ls"]
 formatter = { command = "templ", args = ["fmt"]}
+auto-format = true
 
 [[language]]
 name = "svelte"
 language-servers = ["svelteserver", "tailwindcss-ls", "typescript-language-server"]
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server", "tailwindcss-ls", "emmet-ls" ]
