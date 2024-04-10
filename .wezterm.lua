@@ -1,12 +1,14 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.color_scheme = 'Gruvbox light, soft (base16)'
+config.color_scheme = 'Solarized Light (Gogh)'
+-- config.color_scheme = 'Gruvbox light, soft (base16)'
 -- config.color_scheme = "zenbones_dark"
 -- config.color_scheme = 'Tokyo Night Day'
 -- config.font = wezterm.font("FiraCode Nerd Font", { weight = "Regular" })
-config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Regular" })
+-- config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("UbuntuMono Nerd Font", { weight = "Regular" })
+config.font = wezterm.font("ZedMono Nerd Font Mono", { weight = "Regular", stretch = "Expanded" })
 config.font_size = 17
 
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
