@@ -9,7 +9,7 @@ config.color_scheme = 'Solarized Dark (Gogh)'
 -- config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("UbuntuMono Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("ZedMono Nerd Font Mono", { weight = "Regular", stretch = "Expanded" })
-config.font = wezterm.font("Zed Mono", { weight = "Medium" })
+config.font = wezterm.font("Zed Mono", { weight = "Regular" })
 config.font_size = 17
 
 config.default_cursor_style = 'SteadyUnderline'
