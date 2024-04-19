@@ -6,10 +6,11 @@ config.color_scheme = 'Solarized Dark (Gogh)'
 -- config.color_scheme = "zenbones_dark"
 -- config.color_scheme = 'Tokyo Night Day'
 -- config.font = wezterm.font("FiraCode Nerd Font", { weight = "Regular" })
-config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Regular" })
+-- config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("UbuntuMono Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("Zed Mono", { weight = "Regular" })
 -- config.font = wezterm.font("RobotoMono Nerd Font", { weight = "Regular" })
+config.font = wezterm.font("DejaVuSansM Nerd Font Mono", { weight = "Regular" })
 config.font_size = 17
 
 config.default_cursor_style = 'SteadyUnderline'
