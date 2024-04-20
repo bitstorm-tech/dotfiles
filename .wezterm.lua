@@ -13,7 +13,7 @@ config.color_scheme = 'Solarized Dark (Gogh)'
 config.font = wezterm.font("DejaVuSansM Nerd Font Mono", { weight = "Regular" })
 config.font_size = 17
 
-config.default_cursor_style = 'SteadyUnderline'
+config.default_cursor_style = 'SteadyBlock'
 -- config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.audible_bell = "Disabled"
 config.hide_tab_bar_if_only_one_tab = true
