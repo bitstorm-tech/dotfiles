@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.color_scheme = 'Solarized Dark (Gogh)'
+config.color_scheme = 'JetBrains Darcula'
 -- config.color_scheme = 'Gruvbox light, soft (base16)'
 -- config.color_scheme = "zenbones_dark"
 -- config.color_scheme = 'Tokyo Night Day'
