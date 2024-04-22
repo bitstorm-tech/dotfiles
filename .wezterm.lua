@@ -10,7 +10,8 @@ config.color_scheme = 'JetBrains Darcula'
 -- config.font = wezterm.font("UbuntuMono Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("Zed Mono", { weight = "Regular" })
 -- config.font = wezterm.font("RobotoMono Nerd Font", { weight = "Regular" })
-config.font = wezterm.font("DejaVuSansM Nerd Font Mono", { weight = "Regular" })
+-- config.font = wezterm.font("DejaVuSansM Nerd Font Mono", { weight = "Regular" })
+config.font = wezterm.font("Monaco", { weight = "Regular" })
 config.font_size = 17
 
 config.default_cursor_style = 'SteadyBlock'
