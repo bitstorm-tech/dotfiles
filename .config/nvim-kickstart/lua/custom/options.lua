@@ -5,6 +5,7 @@
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.relativenumber = true
+vim.opt.wrap = false
 
 -- Make line numbers default
 vim.opt.number = true

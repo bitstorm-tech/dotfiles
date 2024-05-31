@@ -40,3 +40,4 @@ vim.keymap.set('n', '<space>th', ':Telescope colorscheme<cr>', { desc = 'Open co
 vim.keymap.set('n', '<space>q', ':qa<cr>', { desc = 'Quit' })
 vim.keymap.set('n', '<space>ww', ':wa<cr>', { desc = 'Save all' })
 vim.keymap.set('n', '<C-s>', ':wa<cr>', { desc = 'Save all' })
+vim.keymap.set('n', '<space>bn', ':bNext<cr>', { desc = 'Goto next buffer' })
