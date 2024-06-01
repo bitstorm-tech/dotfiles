@@ -6,6 +6,16 @@ return {
     config = function()
       -- You can configure highlights by doing something like
       vim.cmd.hi 'Comment gui=none'
+      local tokyonight = require 'tokyonight'
+      tokyonight.setup {
+        style = 'night',
+        transparent = true,
+        styles = {
+          sidebars = 'transparent',
+          floats = 'transparent',
+        },
+      }
+      tokyonight.load()
     end,
   },
   {
