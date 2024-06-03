@@ -41,7 +41,7 @@ return {
     cmd = 'ASToggle', -- optional for lazy loading on command
     event = { 'InsertLeave' }, -- optional for lazy loading on trigger events
     opts = {
-      debounce_delay = 250,
+      debounce_delay = 100,
       execution_message = {
         enabled = false,
       },
