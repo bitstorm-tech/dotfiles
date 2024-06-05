@@ -1,6 +1,7 @@
 format = """
 $directory\
 (fg:#769ff0 bg:#394260)\
+$python\
 $git_branch\
 $git_status\
 [](fg:#394260)\
@@ -55,3 +56,8 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+
+[python]
+symbol = "🐍 "
+style = "bold green"
+format = "[ $symbol($version) ($virtualenv) ]($style)"
