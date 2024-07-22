@@ -18,6 +18,7 @@ alias e='emacs'
 
 function gomodup { go get -u ./...; go mod tidy }
 function brewup { brew upgrade; brew cleanup; brew autoremove }
+function weztitle { wezterm cli set-tab-title $1 }
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(zoxide init --cmd cd zsh)"
