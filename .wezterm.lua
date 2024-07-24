@@ -5,6 +5,7 @@ config.color_scheme = "JetBrains Darcula"
 -- config.color_scheme = 'Gruvbox light, soft (base16)'
 -- config.color_scheme = "zenbones_dark"
 -- config.color_scheme = 'Tokyo Night Day'
+
 -- config.font = wezterm.font("FiraCode Nerd Font", { weight = "Regular" })
 config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("UbuntuMono Nerd Font", { weight = "Regular" })
@@ -12,7 +13,7 @@ config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("RobotoMono Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("DejaVuSansM Nerd Font Mono", { weight = "Regular" })
 -- config.font = wezterm.font("Monaco", { weight = "Regular" })
-config.font_size = 17
+config.font_size = 18
 
 config.default_cursor_style = "SteadyBlock"
 -- config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
