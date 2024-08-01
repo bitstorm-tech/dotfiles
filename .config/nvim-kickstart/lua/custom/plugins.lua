@@ -36,6 +36,7 @@ return {
       },
       git = {
         ignore = false,
+        enable = false,
       },
     },
   },
