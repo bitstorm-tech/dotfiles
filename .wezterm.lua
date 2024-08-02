@@ -16,17 +16,17 @@ config.font = wezterm.font("JetbrainsMono Nerd Font", { weight = "Regular" })
 config.font_size = 18
 
 config.default_cursor_style = "SteadyBlock"
--- config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.audible_bell = "Disabled"
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_max_width = 64
 config.use_fancy_tab_bar = false
 config.enable_scroll_bar = false
 config.window_padding = {
-	left = 5,
-	right = 5,
+	left = 0,
+	right = 0,
 	top = 0,
-	bottom = 10,
+	bottom = 5,
 }
 config.initial_rows = 50
 config.initial_cols = 200
