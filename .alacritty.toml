@@ -14,5 +14,8 @@ size = 18
 [cursor]
 style = { shape = "Block" }
 
+[window]
+dimensions = { columns = 200, lines = 50 }
+
 [env]
 TERM = "xterm-256color"
