@@ -34,6 +34,10 @@ return {
       view = {
         adaptive_size = true,
       },
+      git = {
+        ignore = false,
+        enable = false,
+      },
     },
   },
   {
