@@ -26,7 +26,7 @@ config.window_padding = {
 	left = 0,
 	right = 0,
 	top = 0,
-	bottom = 5,
+	bottom = 0,
 }
 config.initial_rows = 50
 config.initial_cols = 200
