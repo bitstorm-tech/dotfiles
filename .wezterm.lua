@@ -30,5 +30,12 @@ config.window_padding = {
 }
 config.initial_rows = 50
 config.initial_cols = 200
+config.keys = {
+	{
+		key = "l",
+		mods = "CMD",
+		action = wezterm.action({ ClearScrollback = "ScrollbackAndViewport" }),
+	},
+}
 
 return config
