@@ -358,7 +358,7 @@ require('lazy').setup {
           filetypes = { 'html', 'templ' },
         },
         eslint = {
-          filetypes = { 'html', 'ts', 'js' },
+          filetypes = { 'html', 'ts', 'js', 'astro' },
         },
         pylsp = {},
         -- pyright = {},
@@ -456,6 +456,7 @@ require('lazy').setup {
         yaml = { 'yamlls' },
         yml = { 'yamlls' },
         sh = { 'bashls' },
+        astro = { 'prettier' },
       },
     },
   },
