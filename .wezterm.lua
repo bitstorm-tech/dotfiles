@@ -32,7 +32,7 @@ config.initial_rows = 50
 config.initial_cols = 200
 config.keys = {
 	{
-		key = "l",
+		key = "k",
 		mods = "CMD",
 		action = wezterm.action({ ClearScrollback = "ScrollbackAndViewport" }),
 	},
