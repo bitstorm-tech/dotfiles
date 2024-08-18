@@ -641,4 +641,4 @@ require('lazy').setup {
 }
 
 require 'custom.snippets'
-vim.cmd.colorscheme 'tokyonight'
+vim.cmd.colorscheme 'nordfox'

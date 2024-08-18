@@ -44,6 +44,7 @@ return {
     'okuuva/auto-save.nvim',
     cmd = 'ASToggle', -- optional for lazy loading on command
     event = { 'InsertLeave' }, -- optional for lazy loading on trigger events
+    enabled = false,
     opts = {
       debounce_delay = 300,
       execution_message = {
@@ -61,5 +62,23 @@ return {
       local cmp = require 'cmp'
       cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
     end,
+  },
+  {
+    'akinsho/bufferline.nvim',
+    lazy = false,
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    opts = {
+      options = {
+        separator_style = 'slant',
+        offsets = {
+          {
+            filetype = 'NvimTree',
+            text = 'File Explorer',
+            text_align = 'left',
+            separator = true,
+          },
+        },
+      },
+    },
   },
 }

@@ -41,5 +41,7 @@ vim.keymap.set('n', '<space>q', ':qa<cr>', { desc = 'Quit' })
 vim.keymap.set('n', '<space>ww', ':wa<cr>', { desc = 'Save all' })
 vim.keymap.set('n', '<C-s>', ':wa<cr>', { desc = 'Save all' })
 vim.keymap.set('n', '<space>bn', ':bNext<cr>', { desc = 'Goto next buffer' })
+vim.keymap.set('n', '<S-l>', ':bnext<cr>', { desc = 'Goto next buffer' })
+vim.keymap.set('n', '<S-h>', ':bprevious<cr>', { desc = 'Goto next buffer' })
 
 vim.keymap.set('i', '<C-e>', '<C-o>$', { desc = 'Jump to the end of the line when in insert mode' })
