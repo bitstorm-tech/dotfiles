@@ -45,3 +45,4 @@ vim.keymap.set('n', '<S-l>', ':bnext<cr>', { desc = 'Goto next buffer' })
 vim.keymap.set('n', '<S-h>', ':bprevious<cr>', { desc = 'Goto next buffer' })
 
 vim.keymap.set('i', '<C-e>', '<C-o>$', { desc = 'Jump to the end of the line when in insert mode' })
+vim.keymap.set('i', '<C-o>', '<Esc>o', { desc = 'New line below' })
