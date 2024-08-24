@@ -3,18 +3,21 @@ return {
     'folke/noice.nvim',
     lazy = false,
     event = 'VeryLazy',
-    opts = {
-      routes = {
-        {
-          filter = {
-            event = 'msg_show',
-            kind = '',
-            find = 'written', -- This filters out messages containing "written"
+    opts = {},
+    config = function()
+      require('noice').setup {
+        routes = {
+          {
+            filter = {
+              event = 'msg_show',
+              kind = '',
+              find = 'written',
+            },
+            opts = { skip = true },
           },
-          opts = { skip = true }, -- Skip displaying these messages
         },
-      },
-    },
+      }
+    end,
     dependencies = {
       'MunifTanjim/nui.nvim',
       'rcarriga/nvim-notify',
