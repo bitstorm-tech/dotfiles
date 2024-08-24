@@ -5,11 +5,10 @@
 #: kitty has very powerful font management. You can configure
 #: individual font faces and even specify special fonts for particular
 #: characters.
-
-font_family      MesloLGS NF
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
+# font_family      MesloLGS NF
+# bold_font        auto
+# italic_font      auto
+# bold_italic_font auto
 
 #: You can specify different fonts for the bold/italic/bold-italic
 #: variants. The easiest way to select fonts is to run the `kitten
@@ -1023,7 +1022,7 @@ tab_bar_edge top
 #: The second number is the margin between the tab bar and the
 #: contents of the current tab.
 
-tab_bar_style powerline
+tab_bar_style slant
 
 #: The tab bar style, can be one of:
 
@@ -1784,7 +1783,7 @@ tab_bar_style powerline
 #: Dock). Changing this option by reloading the config is not
 #: supported.
 
-# macos_quit_when_last_window_closed no
+macos_quit_when_last_window_closed yes
 
 #: Have kitty quit when all the top-level windows are closed on macOS.
 #: By default, kitty will stay running, even with no open windows, as
@@ -2601,3 +2600,11 @@ map cmd+9 goto_tab 9
 # Doom One
 include current-theme.conf
 # END_KITTY_THEME
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="JetBrainsMonoNL Nerd Font Mono"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
