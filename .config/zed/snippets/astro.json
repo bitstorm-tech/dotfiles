@@ -1,0 +1,7 @@
+{
+  "Translate": {
+    "prefix": "translate",
+    "body": ["{t(\"$1\", user.language)}", "$0"],
+    "description": "Translate"
+  }
+}

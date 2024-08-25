@@ -1,0 +1,7 @@
+{
+  "export async function": {
+    "prefix": "exasfunc",
+    "body": ["export async function $1($2) {\n$0\n}"],
+    "description": "export async function"
+  }
+}
