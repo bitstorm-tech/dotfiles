@@ -19,7 +19,7 @@
 #: <https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/#font-spec-
 #: syntax>.
 
-font_size 17.0
+font_size 17.5
 
 #: Font size (in pts).
 
@@ -1022,7 +1022,7 @@ tab_bar_edge top
 #: The second number is the margin between the tab bar and the
 #: contents of the current tab.
 
-tab_bar_style slant
+tab_bar_style powerline
 
 #: The tab bar style, can be one of:
 
@@ -1048,7 +1048,7 @@ tab_bar_style slant
 #:     a mapping for the select_tab action which presents you with a list of
 #:     tabs and allows for easy switching to a tab.
 
-# tab_bar_align left
+# tab_bar_align center
 
 #: The horizontal alignment of the tab bar, can be one of: left,
 #: center, right.
@@ -1080,7 +1080,7 @@ tab_bar_style slant
 #: The separator between tabs in the tab bar when using separator as
 #: the tab_bar_style.
 
-# tab_powerline_style angled
+tab_powerline_style slanted
 
 #: The powerline separator style between tabs in the tab bar when
 #: using powerline as the tab_bar_style, can be one of: angled,
@@ -2467,6 +2467,7 @@ map cmd+9 goto_tab 9
 #::      map f1 clear_terminal to_cursor active
 #::      # Same as above except cleared lines are moved into scrollback
 #::      map f1 clear_terminal to_cursor_scroll active
+map cmd+k clear_terminal scrollback active
 
 #::  If you want to operate on all kitty windows instead of just the
 #::  current one, use all instead of active.
