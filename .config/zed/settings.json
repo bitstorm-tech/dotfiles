@@ -7,6 +7,10 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+	"tabs": {
+		"file_icons": true
+	},
+	"show_inline_completions": false,
 	"assistant": {
 		"default_model": {
 			"provider": "copilot_chat",
@@ -14,16 +18,14 @@
 		},
 		"version": "2"
 	},
-	"show_inline_completions": false,
 	"features": {
 		"copilot": true
 	},
 	"vim_mode": true,
-	"show_copilot_suggestions": false,
 	"theme": {
 		"mode": "system",
 		"light": "One Light",
-		"dark": "Catppuccin Macchiato"
+		"dark": "New Darcula"
 	},
 	"base_keymap": "VSCode",
 	"telemetry": {
@@ -49,5 +51,19 @@
 		"enabled": false
 	},
 	"hard_tabs": true,
-	"tab_size": 4
+	"tab_size": 4,
+	"project_panel": {
+		"auto_reveal_entries": false
+	},
+	"file_scan_exclusions": [
+		".DS_Store",
+		".vscode",
+		".idea",
+		".git",
+		".astro/",
+		"node_modules",
+		"dist",
+		"tmp",
+		"_templ.go"
+	]
 }
