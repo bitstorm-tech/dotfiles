@@ -353,12 +353,12 @@ require('lazy').setup {
         html = {
           filetypes = { 'html', 'templ' },
         },
-        tsserver = {},
+        ts_ls = {},
         cssls = {
           filetypes = { 'html', 'templ' },
         },
         eslint = {
-          filetypes = { 'html', 'ts', 'js', 'astro' },
+          filetypes = { 'html', 'ts', 'js' },
         },
         pylsp = {},
         -- pyright = {},
@@ -446,17 +446,17 @@ require('lazy').setup {
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
-        javascript = { { 'prettierd', 'prettier' } },
-        css = { 'prettier' },
-        html = { 'prettier' },
-        json = { 'prettier' },
-        typescript = { 'prettier' },
+        javascript = { 'prettierd' },
+        css = { 'prettierd' },
+        html = { 'prettierd' },
+        json = { 'prettierd' },
+        typescript = { 'prettierd' },
         go = { 'gopls' },
-        templ = { 'templ', 'prettier' },
+        templ = { 'templ', 'prettierd' },
         yaml = { 'yamlls' },
         yml = { 'yamlls' },
         sh = { 'bashls' },
-        astro = { 'prettier' },
+        astro = { 'prettierd' },
       },
     },
   },
