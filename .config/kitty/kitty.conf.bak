@@ -19,7 +19,7 @@
 #: <https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/#font-spec-
 #: syntax>.
 
-font_size 17.5
+font_size 19 
 
 #: Font size (in pts).
 
@@ -2598,7 +2598,7 @@ map cmd+k clear_terminal scrollback active
 
 
 # BEGIN_KITTY_THEME
-# Doom One
+# Nordfox
 include current-theme.conf
 # END_KITTY_THEME
 
