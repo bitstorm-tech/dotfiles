@@ -5,6 +5,7 @@ export VISUAL='nvim'
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="$HOME/.bun/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 alias ll='ls -lh --color --group-directories-first'
 alias la='ll -a'
