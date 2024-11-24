@@ -165,6 +165,9 @@ require('lazy').setup {
         --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         --   },
         -- },
+        defaults = {
+          initial_mode = 'normal',
+        },
         -- pickers = {}
         extensions = {
           ['ui-select'] = {
