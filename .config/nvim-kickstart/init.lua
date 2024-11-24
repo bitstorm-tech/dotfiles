@@ -95,7 +95,7 @@ require('lazy').setup {
         { '<leader>s', desc = '[S]earch' },
         { '<leader>w', desc = '[W]orkspace' },
         { '<leader>b', desc = '[B]uffer' },
-        { '<leader>l', desc = '[L]azy Git' },
+        { '<leader>l', desc = '[L]azy' },
         { '<leader>t', desc = '[T]heme' },
       }
     end,
