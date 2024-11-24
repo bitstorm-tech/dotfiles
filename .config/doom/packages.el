@@ -50,5 +50,5 @@
 ;; (unpin! t)
 
 (package! evil-terminal-cursor-changer)
-(package! templ-ts-mode)
 (package! lsp-tailwindcss)
+(package! astro-ts-mode)

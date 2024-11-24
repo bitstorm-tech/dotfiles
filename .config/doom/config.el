@@ -85,3 +85,10 @@
 (setq global-hl-line-modes nil)
 
 (setq which-key-idle-delay 0.25)
+
+(setq mac-command-modifier 'meta)
+
+(setq treesit-language-source-alist
+      '((astro "https://github.com/virchau13/tree-sitter-astro")
+        (css "https://github.com/tree-sitter/tree-sitter-css")
+        (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")))
