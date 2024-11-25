@@ -649,4 +649,4 @@ require('lazy').setup {
 }
 
 require 'custom.snippets'
-vim.cmd.colorscheme 'nordfox'
+vim.cmd.colorscheme 'onedark'

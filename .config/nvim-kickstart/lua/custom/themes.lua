@@ -31,4 +31,10 @@ return {
     lazy = false,
     priority = 1000,
   },
+  {
+    'Mofiqul/dracula.nvim',
+  },
+  {
+    'navarasu/onedark.nvim',
+  },
 }
