@@ -97,6 +97,7 @@ require('lazy').setup {
         { '<leader>b', desc = '[B]uffer' },
         { '<leader>l', desc = '[L]azy' },
         { '<leader>t', desc = '[T]heme' },
+        { '<leader>g', desc = '[G]it' },
       }
     end,
   },
