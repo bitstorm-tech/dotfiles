@@ -1,5 +1,8 @@
 [font]
-normal = ["MonaspiceAr Nerd Font"]
 size = 19
-style = "Light1"
+# hinting = 'slight'
+
+[[font.normal]]
+family = "MonaspiceAR Nerd Font"
+style = "Light"
 
