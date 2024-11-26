@@ -1,3 +1,7 @@
 return {
-  'f-person/git-blame.nvim',
+  'FabijanZulj/blame.nvim',
+  lazy = false,
+  config = function()
+    require('blame').setup {}
+  end,
 }
