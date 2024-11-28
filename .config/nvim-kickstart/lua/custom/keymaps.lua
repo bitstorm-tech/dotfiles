@@ -44,8 +44,8 @@ vim.keymap.set('n', '<space>ba', ':CloseAllBuffers<cr>', { desc = 'Close all buf
 vim.keymap.set('n', '<C-s>', ':wa<cr>', { desc = 'Save all' })
 vim.keymap.set('n', 's', ':wa<cr>', { desc = 'Save all' })
 vim.keymap.set('n', '<space>bn', ':bNext<cr>', { desc = 'Goto next buffer' })
-vim.keymap.set('n', '<S-l>', ':bnext<cr>', { desc = 'Goto next buffer' })
-vim.keymap.set('n', '<S-h>', ':bprevious<cr>', { desc = 'Goto next buffer' })
+-- vim.keymap.set('n', '<S-l>', ':bnext<cr>', { desc = 'Goto next buffer' })
+-- vim.keymap.set('n', '<S-h>', ':bprevious<cr>', { desc = 'Goto next buffer' })
 vim.keymap.set('n', '<space>gb', ':BlameToggle<cr>', { desc = 'Toggle Git blame' })
 
 vim.keymap.set('i', 'hh', '<C-o>$', { desc = 'Jump to the end of the line when in insert mode' })
