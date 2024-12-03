@@ -1,15 +1,27 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+format = """
+[ ](#769ff0)\
+$directory\
+$git_branch\
+$git_status\
+$rust\
+$golang\
+$php\
+$python\
+[](#769ff0)\
+\n $character
+"""
+
 add_newline = true
 command_timeout = 5000
 
 [character]
 success_symbol = '[→](bold green)'
-# success_symbol = '[➜](bold green)'
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
-format = "[ $path ]($style)"
+format = "[$path ]($style)"
 truncation_length = 5
 truncate_to_repo = false
 truncation_symbol = "…/"
@@ -60,14 +72,3 @@ symbol = "🐍 "
 style = "bold green"
 format = "[ $symbol($version) ($virtualenv) ]($style)"
 
-[kotlin]
-disabled = true
-
-[java]
-disabled = true
-
-[gradle]
-disabled = true
-
-[package]
-disabled = true
