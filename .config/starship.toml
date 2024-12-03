@@ -1,13 +1,11 @@
-format = """
-$directory\
-(fg:#769ff0 bg:#394260)\
-$python\
-$git_branch\
-$git_status\
-[](fg:#394260)\
-\n$character"""
+"$schema" = 'https://starship.rs/config-schema.json'
 
+add_newline = true
 command_timeout = 5000
+
+[character]
+success_symbol = '[→](bold green)'
+# success_symbol = '[➜](bold green)'
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
@@ -52,7 +50,7 @@ style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [time]
-disabled = false
+disabled = true
 time_format = "%R" # Hour:Minute Format
 style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
@@ -61,3 +59,15 @@ format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
 symbol = "🐍 "
 style = "bold green"
 format = "[ $symbol($version) ($virtualenv) ]($style)"
+
+[kotlin]
+disabled = true
+
+[java]
+disabled = true
+
+[gradle]
+disabled = true
+
+[package]
+disabled = true
