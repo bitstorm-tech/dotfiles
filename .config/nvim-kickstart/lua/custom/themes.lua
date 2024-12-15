@@ -8,7 +8,7 @@ return {
       vim.cmd.hi 'Comment gui=none'
       local tokyonight = require 'tokyonight'
       tokyonight.setup {
-        style = 'night',
+        style = 'storm',
         transparent = true,
         styles = {
           sidebars = 'transparent',
