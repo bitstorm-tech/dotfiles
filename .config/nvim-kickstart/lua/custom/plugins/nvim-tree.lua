@@ -10,5 +10,12 @@ return {
       ignore = false,
       enable = false,
     },
+    renderer = {
+      icons = {
+        show = {
+          folder_arrow = false,
+        },
+      },
+    },
   },
 }
