@@ -1,3 +1,8 @@
 font-size = 18.5
 font-feature = -calt
+
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = false
+
 theme = zenwritten_dark
