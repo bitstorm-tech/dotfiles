@@ -20,6 +20,7 @@ alias c='clear'
 alias e='emacs'
 alias nv='neovide'
 alias z='zellij'
+alias igrep='grep -i'
 
 function gomodup { go get -u ./...; go mod tidy }
 function brewup { brew upgrade; brew cleanup; brew autoremove }
