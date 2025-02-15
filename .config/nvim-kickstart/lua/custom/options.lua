@@ -6,6 +6,7 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.relativenumber = false
 vim.opt.wrap = false
+vim.opt.foldmethod = 'marker'
 
 -- Make line numbers default
 vim.opt.number = true

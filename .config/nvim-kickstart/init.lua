@@ -45,9 +45,7 @@ require('lazy').setup {
   --  This is equivalent to:
   --    require('Comment').setup({})
 
-  -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
-
+  -- {{{ gitsigns
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following lua:
   --    require('gitsigns').setup({ ... })
@@ -65,7 +63,9 @@ require('lazy').setup {
       },
     },
   },
+  ---}}}
 
+  -- {{{ which-key
   -- NOTE: Plugins can also be configured to run lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
@@ -101,7 +101,9 @@ require('lazy').setup {
       }
     end,
   },
+  --}}}
 
+  -- {{{ telescope
   -- NOTE: Plugins can specify dependencies.
   --
   -- The dependencies are proper plugin specifications as well - anything
@@ -218,7 +220,9 @@ require('lazy').setup {
       end, { desc = '[S]earch [N]eovim files' })
     end,
   },
+  --}}}
 
+  --{{{ nvim-lspconfig
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -439,7 +443,9 @@ require('lazy').setup {
       }
     end,
   },
+  ---}}}
 
+  --{{{ conform
   { -- Autoformat
     'stevearc/conform.nvim',
     opts = {
@@ -469,7 +475,9 @@ require('lazy').setup {
       },
     },
   },
+  ---}}}
 
+  ---{{{ nvim-cmp
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
@@ -562,12 +570,9 @@ require('lazy').setup {
       }
     end,
   },
+  ---}}}
 
-  { import = 'custom.themes' },
-
-  -- Highlight todo, notes, etc in comments
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-
+  ---{{{ mini
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
@@ -604,7 +609,9 @@ require('lazy').setup {
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
+  ---}}}
 
+  ---{{{ nvim-treesitter
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -628,7 +635,15 @@ require('lazy').setup {
       --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
     end,
   },
+  ---}}}
 
+  { import = 'custom.themes' },
+
+  -- Highlight todo, notes, etc in comments
+  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+
+  -- "gc" to comment visual regions/lines
+  { 'numToStr/Comment.nvim', opts = {} },
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- put them in the right spots if you want.
