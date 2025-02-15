@@ -477,7 +477,7 @@ require('lazy').setup {
   },
   ---}}}
 
-  ---{{{ nvim-cmp
+  --{{{ nvim-cmp
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
@@ -572,7 +572,7 @@ require('lazy').setup {
   },
   ---}}}
 
-  ---{{{ mini
+  --{{{ mini
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
@@ -611,7 +611,7 @@ require('lazy').setup {
   },
   ---}}}
 
-  ---{{{ nvim-treesitter
+  --{{{ nvim-treesitter
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
