@@ -363,17 +363,18 @@ require('lazy').setup {
           filetypes = { 'html', 'templ' },
         },
         html = {
-          filetypes = { 'html', 'templ' },
+          filetypes = { 'html', 'templ', 'blade' },
         },
         ts_ls = {},
         cssls = {
-          filetypes = { 'html', 'templ' },
+          filetypes = { 'html', 'templ', 'blade' },
         },
         eslint = {
-          filetypes = { 'html', 'ts', 'js' },
+          filetypes = { 'html', 'ts', 'js', 'blade' },
         },
         pylsp = {},
         phpactor = {},
+        tailwindcss = { 'html', 'blade' },
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -473,6 +474,8 @@ require('lazy').setup {
         yml = { 'yamlls' },
         sh = { 'bashls' },
         astro = { 'prettierd' },
+        php = { 'pint' },
+        blade = { 'prettierd' },
       },
     },
   },
@@ -667,3 +670,31 @@ require('lazy').setup {
 
 require 'custom.snippets'
 vim.cmd.colorscheme 'onedark'
+
+--{{{ enable Laravel Blade syntax highlighting
+-- TODO: move to a better location
+local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
+parser_config.blade = {
+  install_info = {
+    url = 'https://github.com/EmranMR/tree-sitter-blade',
+    files = { 'src/parser.c' },
+    branch = 'main',
+  },
+  filetype = 'blade',
+}
+
+vim.filetype.add {
+  pattern = {
+    ['.*%.blade%.php'] = 'blade',
+  },
+}
+local bladeGrp
+vim.api.nvim_create_augroup('BladeFiltypeRelated', { clear = true })
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+  pattern = '*.blade.php',
+  group = bladeGrp,
+  callback = function()
+    vim.opt.filetype = 'blade'
+  end,
+})
+--}}}
