@@ -6,4 +6,4 @@ shell-integration-features = no-cursor
 cursor-style = block
 # cursor-style-blink = false
 
-theme = zenwritten_dark
+theme = dark:zenwritten_dark,light:GruvboxLight
