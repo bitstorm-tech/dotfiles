@@ -373,7 +373,7 @@ require('lazy').setup {
           filetypes = { 'html', 'ts', 'js', 'blade' },
         },
         pylsp = {},
-        phpactor = {},
+        intelephense = {},
         tailwindcss = { 'html', 'blade' },
         -- pyright = {},
         -- rust_analyzer = {},
