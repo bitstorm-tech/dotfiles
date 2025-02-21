@@ -1,9 +1,10 @@
 # font-family = MonaspiceNe Nerd Font
-font-size = 19
+font-size = 20
 font-feature = -calt
 
 shell-integration-features = no-cursor
 cursor-style = block
 # cursor-style-blink = false
 
-theme = dark:zenwritten_dark,light:GruvboxLight
+# theme = dark:zenwritten_dark,light:GruvboxLight
+theme = carbonfox
