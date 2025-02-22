@@ -14,7 +14,7 @@ vim.keymap.set('n', '<leader>Q', vim.diagnostic.setloclist, { desc = 'Open diagn
 --
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+-- vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('v', 'p', '"_dP')
 
 -- TIP: Disable arrow keys in normal mode
@@ -38,7 +38,7 @@ vim.keymap.set('n', '<leader>lg', ':LazyGit<cr>', { desc = 'Open LazyGit' })
 vim.keymap.set('n', '<leader>lu', ':Lazy update<cr>', { desc = 'Lazy update' })
 vim.keymap.set('n', '<leader>e', ':NvimTreeFindFileToggle<cr>', { desc = 'Toggle NvimTree' })
 vim.keymap.set('n', '<leader>x', ':bw<cr> :bnext<cr>', { desc = 'Close current buffer' })
-vim.keymap.set('n', '<leader>th', ':Telescope colorscheme<cr>', { desc = 'Open colorscheme' })
+vim.keymap.set('n', '<leader>Th', ':Telescope colorscheme<cr>', { desc = 'Open colorscheme' })
 vim.keymap.set('n', '<leader>q', ':qa<cr>', { desc = 'Quit' })
 vim.keymap.set('n', '<leader>ww', ':wa<cr>', { desc = 'Save all' })
 vim.keymap.set('n', '<leader>ba', ':CloseAllBuffers<cr>', { desc = 'Close all buffers' })
@@ -48,7 +48,7 @@ vim.keymap.set('n', '<leader>bn', ':bNext<cr>', { desc = 'Goto next buffer' })
 -- vim.keymap.set('n', '<S-l>', ':bnext<cr>', { desc = 'Goto next buffer' })
 -- vim.keymap.set('n', '<S-h>', ':bprevious<cr>', { desc = 'Goto next buffer' })
 vim.keymap.set('n', '<leader>gb', ':BlameToggle<cr>', { desc = 'Toggle Git blame' })
-vim.keymap.set('n', '<leader>T', ':ToggleTerm<cr>', { desc = 'Open terminal' })
+vim.keymap.set('n', '<leader>t', ':ToggleTerm<cr>', { desc = 'Open terminal' })
 
 vim.keymap.set('i', 'hh', '<C-o>$', { desc = 'Jump to the end of the line when in insert mode' })
 vim.keymap.set('i', '<C-o>', '<Esc>o', { desc = 'New line below' })
