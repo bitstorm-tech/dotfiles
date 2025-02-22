@@ -7,4 +7,4 @@ cursor-style = block
 # cursor-style-blink = false
 
 # theme = dark:zenwritten_dark,light:GruvboxLight
-theme = carbonfox
+theme = monokai pro
