@@ -2,10 +2,11 @@
 # font-family = FiraCode Nerd Font Mono
 # font-family = DejaVuSansM Nerd Font Mono
 # font-family = Consolas
-font-family = Fira Mono
+# font-family = Fira Mono
 # font-family = 0xProto Nerd Font Mono
+font-family = IBM Plex Mono
 
-font-size = 20
+font-size = 18
 font-feature = -calt
 
 shell-integration-features = no-cursor
