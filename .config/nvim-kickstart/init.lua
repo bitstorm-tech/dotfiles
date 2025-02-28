@@ -669,7 +669,7 @@ require('lazy').setup {
 }
 
 require 'custom.snippets'
-vim.cmd.colorscheme 'onedark'
+vim.cmd.colorscheme 'nightfox'
 
 --{{{ enable Laravel Blade syntax highlighting
 -- TODO: move to a better location
