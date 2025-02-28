@@ -1,8 +1,9 @@
 # font-family = MonaspiceNe Nerd Font
-font-family = FiraCode Nerd Font Mono
+# font-family = FiraCode Nerd Font Mono
 # font-family = DejaVuSansM Nerd Font Mono
 # font-family = Consolas
-font-size = 18
+font-family = Fira Mono
+font-size = 20
 font-feature = -calt
 
 shell-integration-features = no-cursor
