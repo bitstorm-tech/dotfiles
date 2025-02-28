@@ -3,6 +3,8 @@
 # font-family = DejaVuSansM Nerd Font Mono
 # font-family = Consolas
 font-family = Fira Mono
+# font-family = 0xProto Nerd Font Mono
+
 font-size = 20
 font-feature = -calt
 
