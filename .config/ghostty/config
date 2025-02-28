@@ -1,6 +1,6 @@
 # font-family = MonaspiceNe Nerd Font
-font-size = 20
-font-feature = -calt
+font-size = 18
+# font-feature = -calt
 
 shell-integration-features = no-cursor
 cursor-style = block
