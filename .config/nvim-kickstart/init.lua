@@ -169,7 +169,7 @@ require('lazy').setup {
         --   },
         -- },
         defaults = {
-          initial_mode = 'normal',
+          initial_mode = 'insert',
         },
         -- pickers = {}
         extensions = {
