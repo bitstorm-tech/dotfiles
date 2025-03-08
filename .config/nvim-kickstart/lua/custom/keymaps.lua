@@ -50,7 +50,7 @@ vim.keymap.set('n', '<leader>bn', ':bNext<cr>', { desc = 'Goto next buffer' })
 vim.keymap.set('n', '<leader>gb', ':BlameToggle<cr>', { desc = 'Toggle Git blame' })
 vim.keymap.set('n', '<leader>t', ':ToggleTerm<cr>', { desc = 'Open terminal' })
 
-vim.keymap.set('i', 'ee', '<C-o>$', { desc = 'Jump to the end of the line when in insert mode' })
+vim.keymap.set('i', '<tab><tab>', '<C-o>$', { desc = 'Jump to the end of the line when in insert mode' })
 vim.keymap.set('i', '<C-o>', '<Esc>o', { desc = 'New line below' })
 vim.keymap.set('i', '<C-s>', '<Esc>:wa<cr>', { desc = 'Save all' })
 vim.keymap.set('i', 'jj', '<Esc>:wa<cr>', { desc = 'Exit Insert mode and save all' })
