@@ -374,7 +374,12 @@ require('lazy').setup {
         },
         pylsp = {},
         intelephense = {},
-        tailwindcss = { 'html', 'blade' },
+        tailwindcss = {
+          filetypes = { 'html', 'blade' },
+        },
+        emmet_language_server = {
+          filetypes = { 'html', 'blade' },
+        },
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
