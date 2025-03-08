@@ -5,12 +5,13 @@
 # font-family = Fira Mono
 # font-family = 0xProto Nerd Font Mono
 font-family = IBM Plex Mono
+# font-family = FiraCode Nerd Font Mono
 
 font-size = 19
 font-feature = -calt
 
-shell-integration-features = no-cursor
-cursor-style = block
+# shell-integration-features = no-cursor
+# cursor-style = block
 # cursor-style-blink = false
 
 # theme = dark:zenwritten_dark,light:GruvboxLight
