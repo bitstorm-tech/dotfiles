@@ -22,6 +22,8 @@ alias nv='neovide'
 alias z='zellij'
 alias igrep='grep -i'
 alias artisan='php artisan'
+alias python='python3'
+alias py='python'
 
 function gomodup { go get -u ./...; go mod tidy }
 function brewup { brew upgrade; brew cleanup; brew autoremove }
