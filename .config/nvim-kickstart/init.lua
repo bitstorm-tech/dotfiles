@@ -372,7 +372,7 @@ require('lazy').setup {
         eslint = {
           filetypes = { 'html', 'ts', 'js', 'blade' },
         },
-        pylsp = {},
+        pyright = {},
         intelephense = {},
         tailwindcss = {
           filetypes = { 'html', 'blade' },
