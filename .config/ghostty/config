@@ -15,4 +15,5 @@ font-feature = -calt
 # cursor-style-blink = false
 
 # theme = dark:zenwritten_dark,light:GruvboxLight
-theme = nightfox
+# theme = nightfox
+theme = catppuccin-frappe
