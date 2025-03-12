@@ -55,3 +55,4 @@ vim.keymap.set('i', '<C-e>', '<C-o>$', { desc = 'Jump to the end of the line whe
 vim.keymap.set('i', '<C-o>', '<Esc>o', { desc = 'New line below' })
 vim.keymap.set('i', '<C-s>', '<Esc>:wa<cr>', { desc = 'Save all' })
 vim.keymap.set('i', '<D-s>', '<Esc>:wa<cr>', { desc = 'Save all' })
+vim.keymap.set('i', '<Esc>', '<Esc>:wa<cr>', { desc = 'Save all' })
