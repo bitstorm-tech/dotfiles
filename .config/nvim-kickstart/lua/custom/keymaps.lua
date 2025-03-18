@@ -27,10 +27,10 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<D-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<D-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<D-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<D-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 vim.keymap.set('n', '<leader>o', 'o<Esc>', { desc = 'New line below' })
 vim.keymap.set('n', '<leader>O', 'O<Esc>', { desc = 'New line below' })
@@ -46,8 +46,8 @@ vim.keymap.set('n', '<C-s>', ':wa<cr>', { desc = 'Save all' })
 vim.keymap.set('n', '<D-s>', ':wa<cr>', { desc = 'Save all' })
 vim.keymap.set('n', 's', ':wa<cr>', { desc = 'Save all' })
 vim.keymap.set('n', '<leader>bn', ':bNext<cr>', { desc = 'Goto next buffer' })
-vim.keymap.set('n', '<C-j>', ':bnext<cr>', { desc = 'Goto next buffer' })
-vim.keymap.set('n', '<C-k>', ':bprevious<cr>', { desc = 'Goto next buffer' })
+vim.keymap.set('n', '<C-k>', ':bnext<cr>', { desc = 'Goto next buffer' })
+vim.keymap.set('n', '<C-j>', ':bprevious<cr>', { desc = 'Goto next buffer' })
 vim.keymap.set('n', '<leader>gb', ':BlameToggle<cr>', { desc = 'Toggle Git blame' })
 vim.keymap.set('n', '<leader>t', ':ToggleTerm<cr>', { desc = 'Open terminal' })
 
