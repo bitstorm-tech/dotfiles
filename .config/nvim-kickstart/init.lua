@@ -677,7 +677,7 @@ require('lazy').setup {
 require 'custom.snippets'
 vim.cmd.colorscheme 'catppuccin-macchiato'
 
---{{{ enable Laravel Blade syntax highlighting
+--{{{ enable Laravel Blade syntax highlighting and commenting
 -- TODO: move to a better location
 local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
 parser_config.blade = {
@@ -703,4 +703,12 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
     vim.opt.filetype = 'blade'
   end,
 })
+require('Comment').setup {
+  pre_hook = function(ctx)
+    -- Only override for Blade files
+    if vim.bo.filetype == 'blade' then
+      return '{{-- %s --}}'
+    end
+  end,
+}
 --}}}
