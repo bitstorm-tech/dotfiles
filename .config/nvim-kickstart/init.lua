@@ -675,7 +675,7 @@ require('lazy').setup {
 }
 
 require 'custom.snippets'
-vim.cmd.colorscheme 'catppuccin-macchiato'
+vim.cmd.colorscheme 'catppuccin-frappe'
 
 --{{{ enable Laravel Blade syntax highlighting and commenting
 -- TODO: move to a better location
