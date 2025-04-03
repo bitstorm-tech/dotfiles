@@ -6,3 +6,5 @@ size = 19
 family = "IBM Plex Mono"
 # style = "Light"
 
+[box-drawing]
+mode = "native"
