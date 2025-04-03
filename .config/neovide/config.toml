@@ -3,6 +3,6 @@ size = 19
 # hinting = 'slight'
 
 [[font.normal]]
-family = "MonaspiceAR Nerd Font"
-style = "Light"
+family = "IBM Plex Mono"
+# style = "Light"
 
