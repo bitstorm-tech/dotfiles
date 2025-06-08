@@ -1,19 +1,26 @@
 return {
   {
-    'smoka7/multicursors.nvim',
-    event = 'VeryLazy',
-    dependencies = {
-      'nvimtools/hydra.nvim',
-    },
-    opts = {},
-    cmd = { 'MCstart', 'MCvisual', 'MCclear', 'MCpattern', 'MCvisualPattern', 'MCunderCursor' },
+    'mg979/vim-visual-multi',
+    branch = 'master',
     keys = {
       {
-        mode = { 'v', 'n' },
+        mode = { 'n' },
         '<Leader>m',
-        '<cmd>MCstart<cr>',
-        desc = 'Create a selection for selected text or word under the cursor',
+        '<Plug>(VM-Find-Under)',
+        desc = 'Create a selection for word under the cursor',
+      },
+      {
+        mode = { 'v' },
+        '<Leader>m',
+        '<Plug>(VM-Find-Subword-Under)',
+        desc = 'Create a selection for selected text',
       },
     },
+    config = function()
+      vim.g.VM_maps = {
+        ['Find Under'] = '<Leader>m',
+        ['Find Subword Under'] = '<Leader>m',
+      }
+    end,
   },
 }
