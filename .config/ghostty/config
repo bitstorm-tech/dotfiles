@@ -11,7 +11,7 @@ font-family = Red Hat Mono
 
 font-style = Medium
 
-font-size = 20
+font-size = 18
 font-feature = -calt
 
 # shell-integration-features = no-cursor
@@ -21,3 +21,4 @@ font-feature = -calt
 # theme = dark:zenwritten_dark,light:GruvboxLight
 # theme = nightfox
 theme = catppuccin-frappe
+keybind = shift+enter=text:\n
