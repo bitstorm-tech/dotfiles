@@ -28,7 +28,10 @@ alias py='python'
 function gomodup { go get -u ./...; go mod tidy }
 function brewup { brew upgrade; brew cleanup; brew autoremove }
 function weztitle { wezterm cli set-tab-title $1 }
-function copytoclipboard { cat $1 | pbcopy }
+function copytoclipboard { 
+	cat $1 | pbcopy 
+	echo "Copied $1 content to clipboard"
+}
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(zoxide init --cmd cd zsh)"
