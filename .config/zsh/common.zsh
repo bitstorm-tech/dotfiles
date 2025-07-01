@@ -24,6 +24,7 @@ alias igrep='grep -i'
 alias artisan='php artisan'
 alias python='python3'
 alias py='python'
+alias history='history 0'
 
 function gomodup { go get -u ./...; go mod tidy }
 function brewup { brew upgrade; brew cleanup; brew autoremove }
