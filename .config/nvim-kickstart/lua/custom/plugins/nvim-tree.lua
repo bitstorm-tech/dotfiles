@@ -4,7 +4,7 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
     view = {
-      -- adaptive_size = true,
+      adaptive_size = true,
       -- float = {
       --   enable = true,
       --   open_win_config = function()
