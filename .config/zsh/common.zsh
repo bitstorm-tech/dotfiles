@@ -35,5 +35,5 @@ function copytoclipboard {
 }
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(zoxide init --cmd cd zsh)"
+# eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
