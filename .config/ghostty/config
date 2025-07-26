@@ -9,10 +9,10 @@
 # font-family = Monaco
 font-family = Red Hat Mono
 
-font-style = Medium
+# font-style = Medium
 
 font-size = 19
-font-feature = -calt
+# font-feature = -calt
 
 # shell-integration-features = no-cursor
 # cursor-style = block
@@ -20,5 +20,8 @@ font-feature = -calt
 
 # theme = dark:zenwritten_dark,light:GruvboxLight
 # theme = nightfox
-theme = catppuccin-frappe
+# theme = catppuccin-frappe
+# theme = catppuccin-mocha
+# theme = MaterialDarker
+theme = Operator Mono Dark
 keybind = shift+enter=text:\n
