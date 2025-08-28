@@ -1,15 +1,14 @@
 # font-family = MonaspiceNe Nerd Font
 # font-family = FiraCode Nerd Font Mono
 # font-family = DejaVuSansM Nerd Font Mono
-# font-family = Consolas
 # font-family = Fira Mono
 # font-family = 0xProto Nerd Font Mono
 # font-family = IBM Plex Mono
-# font-family = JetBrainsMono Nerd Font Mono
+font-family = JetBrainsMono Nerd Font Mono
 # font-family = Monaco
-font-family = Red Hat Mono
+# font-family = Red Hat Mono
 
-# font-style = Medium
+font-style = Light
 
 font-size = 19
 # font-feature = -calt
