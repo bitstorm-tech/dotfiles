@@ -17,7 +17,7 @@ add_newline = true
 command_timeout = 5000
 
 [character]
-success_symbol = '[→](bold green)'
+success_symbol = '[〉](bold green)'
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
