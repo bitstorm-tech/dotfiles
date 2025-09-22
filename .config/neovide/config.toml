@@ -1,10 +1,11 @@
 [font]
-size = 19
+size = 18
 # hinting = 'slight'
 
 [[font.normal]]
-family = "IBM Plex Mono"
-# style = "Light"
+# family = "IBM Plex Mono"
+family = "JetBrains Mono"
+style = "Light"
 
 [box-drawing]
 mode = "native"
