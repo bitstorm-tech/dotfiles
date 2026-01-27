@@ -363,22 +363,22 @@ require('lazy').setup {
           filetypes = { 'html', 'templ' },
         },
         html = {
-          filetypes = { 'html', 'templ', 'blade' },
+          filetypes = { 'html', 'templ' },
         },
         ts_ls = {},
         cssls = {
-          filetypes = { 'html', 'templ', 'blade' },
+          filetypes = { 'html', 'templ' },
         },
         eslint = {
-          filetypes = { 'html', 'ts', 'js', 'blade' },
+          filetypes = { 'html', 'typescript', 'javascript', 'typescriptreact', 'javascriptreact' },
         },
         pyright = {},
         intelephense = {},
         tailwindcss = {
-          filetypes = { 'html', 'blade' },
+          filetypes = { 'html' },
         },
         emmet_language_server = {
-          filetypes = { 'html', 'blade' },
+          filetypes = { 'html' },
         },
         -- pyright = {},
         -- rust_analyzer = {},
@@ -481,7 +481,6 @@ require('lazy').setup {
         sh = { 'bashls' },
         astro = { 'prettierd' },
         php = { 'pint' },
-        blade = { 'prettierd' },
       },
     },
   },
@@ -576,6 +575,7 @@ require('lazy').setup {
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },
+          { name = 'buffer' },
         },
       }
     end,
@@ -677,38 +677,3 @@ require('lazy').setup {
 require 'custom.snippets'
 vim.cmd.colorscheme 'catppuccin-frappe'
 
---{{{ enable Laravel Blade syntax highlighting and commenting
--- TODO: move to a better location
-local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
-parser_config.blade = {
-  install_info = {
-    url = 'https://github.com/EmranMR/tree-sitter-blade',
-    files = { 'src/parser.c' },
-    branch = 'main',
-  },
-  filetype = 'blade',
-}
-
-vim.filetype.add {
-  pattern = {
-    ['.*%.blade%.php'] = 'blade',
-  },
-}
-local bladeGrp
-vim.api.nvim_create_augroup('BladeFiltypeRelated', { clear = true })
-vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
-  pattern = '*.blade.php',
-  group = bladeGrp,
-  callback = function()
-    vim.opt.filetype = 'blade'
-  end,
-})
-require('Comment').setup {
-  pre_hook = function(ctx)
-    -- Only override for Blade files
-    if vim.bo.filetype == 'blade' then
-      return '{{-- %s --}}'
-    end
-  end,
-}
---}}}
