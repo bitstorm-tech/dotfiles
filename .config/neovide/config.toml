@@ -4,7 +4,7 @@ size = 18
 
 [[font.normal]]
 # family = "IBM Plex Mono"
-family = "JetBrains Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Light"
 
 [box-drawing]
