@@ -675,5 +675,5 @@ require('lazy').setup {
 }
 
 require 'custom.snippets'
-vim.cmd.colorscheme 'carbonfox'
+vim.cmd.colorscheme 'kanagawa'
 
