@@ -3,6 +3,13 @@ return {
   lazy = true,
   cmd = { 'NvimTreeToggle', 'NvimTreeFindFileToggle', 'NvimTreeOpen' },
   dependencies = { 'nvim-tree/nvim-web-devicons' },
+  config = function(_, opts)
+    require('nvim-tree').setup(opts)
+
+    -- Float-Highlights an Normal anpassen (funktioniert mit allen Themes)
+    vim.api.nvim_set_hl(0, 'NvimTreeNormalFloat', { link = 'Normal' })
+    vim.api.nvim_set_hl(0, 'NvimTreeWinSeparator', { link = 'WinSeparator' })
+  end,
   opts = {
     view = {
       adaptive_size = true,
