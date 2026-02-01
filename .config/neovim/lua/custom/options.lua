@@ -6,7 +6,9 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.relativenumber = false
 vim.opt.wrap = false
-vim.opt.foldmethod = 'marker'
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldlevel = 99 -- Alle Folds standardmäßig offen
 
 -- Make line numbers default
 vim.opt.number = true
