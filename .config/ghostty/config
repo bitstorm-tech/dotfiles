@@ -25,4 +25,5 @@ cursor-style = block
 # theme = MaterialDarker
 # theme = Operator Mono Dark
 # theme = nordfox
+theme = Kanagawa Dragon
 keybind = shift+enter=text:\n
