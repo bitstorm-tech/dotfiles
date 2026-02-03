@@ -59,7 +59,14 @@ vim.keymap.set('n', '<leader>o', 'o<Esc>', { desc = 'New line below' })
 vim.keymap.set('n', '<leader>O', 'O<Esc>', { desc = 'New line below' })
 vim.keymap.set('n', '<leader>lg', ':LazyGit<cr>', { desc = 'Open LazyGit' })
 vim.keymap.set('n', '<leader>lu', ':Lazy update<cr>', { desc = 'Lazy update' })
-vim.keymap.set('n', '<leader>e', ':NvimTreeFindFileToggle<cr>', { desc = 'Toggle NvimTree [e]xplorer' })
+vim.keymap.set('n', '<leader>e', function()
+  local view = require('nvim-tree.view')
+  if view.is_visible() and vim.bo.filetype == 'NvimTree' then
+    vim.cmd('wincmd p')
+  else
+    require('nvim-tree.api').tree.focus()
+  end
+end, { desc = 'Toggle NvimTree focus' })
 vim.keymap.set('n', '<C-c>', ':bw<cr> :bprevious<cr>', { desc = 'Close current buffer' })
 vim.keymap.set('n', '<leader>T', ':Telescope colorscheme<cr>', { desc = 'Open colorscheme' })
 vim.keymap.set('n', '<leader>q', ':qa<cr>', { desc = 'Quit' })
