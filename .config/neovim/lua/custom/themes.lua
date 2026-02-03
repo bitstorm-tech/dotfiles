@@ -51,4 +51,15 @@ return {
     'catppuccin/nvim',
     priority = 1000,
   },
+  {
+    'ellisonleao/gruvbox.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('gruvbox').setup({
+        contrast = 'hard',
+      })
+      vim.o.background = 'dark'
+    end,
+  },
 }
