@@ -13,10 +13,14 @@
 font-size = 18
 # font-style = Light
 # font-feature = -calt
+adjust-cell-height = 10%
 
 shell-integration-features = no-cursor
 cursor-style = block
 # cursor-style-blink = false
+
+window-padding-x = 20
+window-padding-y = 20
 
 # theme = dark:zenwritten_dark,light:GruvboxLight
 # theme = nightfox
@@ -25,5 +29,7 @@ cursor-style = block
 # theme = MaterialDarker
 # theme = Operator Mono Dark
 # theme = nordfox
-theme = Kanagawa Dragon
+# theme = Kanagawa Dragon
+# theme = TokyoNight
+theme = Gruvbox Dark Hard
 keybind = shift+enter=text:\n
