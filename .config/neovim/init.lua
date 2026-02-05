@@ -170,6 +170,7 @@ require('lazy').setup {
         -- },
         defaults = {
           initial_mode = 'insert',
+          path_display = { 'truncate' },
         },
         -- pickers = {}
         extensions = {
@@ -679,4 +680,3 @@ require('lazy').setup {
 
 require 'custom.snippets'
 vim.cmd.colorscheme 'gruvbox'
-
