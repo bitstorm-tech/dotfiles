@@ -291,23 +291,23 @@ require('lazy').setup {
           -- Jump to the definition of the word under your cursor.
           --  This is where a variable was first declared, or where a function is defined, etc.
           --  To jump back, press <C-T>.
-          map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+          map('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
 
           -- Find references for the word under your cursor.
-          map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+          map('gr', vim.lsp.buf.references, '[G]oto [R]eferences')
 
           -- Jump to the implementation of the word under your cursor.
           --  Useful when your language has ways of declaring types without an actual implementation.
-          map('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+          map('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
 
           -- Jump to the type of the word under your cursor.
           --  Useful when you're not sure what type a variable is and you want to see
           --  the definition of its *type*, not where it was *defined*.
-          map('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
+          map('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
 
           -- Fuzzy find all the symbols in your current document.
           --  Symbols are things like variables, functions, types, etc.
-          map('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+          map('<leader>ds', vim.lsp.buf.document_symbol, '[D]ocument [S]ymbols')
 
           -- Fuzzy find all the symbols in your current workspace
           --  Similar to document symbols, except searches over your whole project.
@@ -375,20 +375,21 @@ require('lazy').setup {
         html = {
           filetypes = { 'html', 'templ' },
         },
-        ts_ls = {},
+        vtsls = {},
+        vue_ls = {},
         cssls = {
           filetypes = { 'html', 'templ' },
         },
         eslint = {
-          filetypes = { 'html', 'typescript', 'javascript', 'typescriptreact', 'javascriptreact' },
+          filetypes = { 'html', 'typescript', 'javascript', 'typescriptreact', 'javascriptreact', 'vue' },
         },
         pyright = {},
         intelephense = {},
         tailwindcss = {
-          filetypes = { 'html' },
+          filetypes = { 'html', 'vue' },
         },
         emmet_language_server = {
-          filetypes = { 'html' },
+          filetypes = { 'html', 'vue' },
         },
         -- pyright = {},
         rust_analyzer = {},
@@ -437,6 +438,28 @@ require('lazy').setup {
       --  You can press `g?` for help in this menu
       require('mason').setup()
 
+      -- Vue: configure vtsls with @vue/typescript-plugin for hybrid mode
+      local vue_language_server_path = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server'
+      servers.vtsls = vim.fn.isdirectory(vue_language_server_path) == 1
+          and {
+            settings = {
+              vtsls = {
+                tsserver = {
+                  globalPlugins = {
+                    {
+                      name = '@vue/typescript-plugin',
+                      location = vue_language_server_path,
+                      languages = { 'vue' },
+                      configNamespace = 'typescript',
+                    },
+                  },
+                },
+              },
+            },
+            filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+          }
+        or {}
+
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
@@ -450,18 +473,15 @@ require('lazy').setup {
 
       require('mason-lspconfig').setup {
         ensure_installed = {},
-        handlers = {
-          function(server_name)
-            local server = servers[server_name] or {}
-            -- This handles overriding only values explicitly passed
-            -- by the server configuration above. Useful when disabling
-            -- certain features of an LSP (for example, turning off formatting for tsserver)
-            server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-            require('lspconfig')[server_name].setup(server)
-          end,
-        },
-        automatic_installation = true,
+        automatic_enable = false,
       }
+
+      for server_name, server in pairs(servers) do
+        -- Merge global capabilities with per-server overrides.
+        server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+        vim.lsp.config(server_name, server)
+        vim.lsp.enable(server_name)
+      end
     end,
   },
   ---}}}
@@ -495,6 +515,7 @@ require('lazy').setup {
         yml = { 'yamlls' },
         sh = { 'bashls' },
         astro = { 'prettierd' },
+        vue = { 'prettierd' },
         php = { 'pint' },
       },
     },
@@ -645,7 +666,7 @@ require('lazy').setup {
 
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc' },
+        ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'vue' },
         -- Autoinstall languages that are not installed
         auto_install = true,
         highlight = { enable = true },
