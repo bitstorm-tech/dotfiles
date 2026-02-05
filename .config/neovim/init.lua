@@ -159,6 +159,8 @@ require('lazy').setup {
 
       -- [[ Configure Telescope ]]
       -- See `:help telescope` and `:help telescope.setup()`
+      local telescope_highlight = require('custom.telescope-highlight')
+
       require('telescope').setup {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
@@ -171,9 +173,16 @@ require('lazy').setup {
         defaults = {
           initial_mode = 'insert',
           path_display = { 'truncate' },
+          file_sorter = telescope_highlight.file_sorter,
+          generic_sorter = telescope_highlight.generic_sorter,
         },
         -- pickers = {}
         extensions = {
+          fzf = {
+            override_file_sorter = false,
+            override_generic_sorter = false,
+            case_mode = 'smart_case',
+          },
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
           },
