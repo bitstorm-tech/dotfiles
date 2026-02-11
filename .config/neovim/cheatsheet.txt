@@ -1,0 +1,20 @@
+## NvimTree @nvimtree
+Toggle NvimTree focus | <leader>e
+Open file/directory | <CR>
+Open in vertical split | <C-v>
+Open in horizontal split | <C-x>
+Open in new tab | <C-t>
+Close directory | <BS>
+Create file or directory | a
+Delete file | d
+Rename file | r
+Full rename (clear + rename) | e
+Cut file | x
+Copy file | c
+Paste file | p
+Copy filename | y
+Copy relative path | Y
+Copy absolute path | gy
+Toggle hidden files | H
+Refresh tree | R
+Preview file | <Tab>
