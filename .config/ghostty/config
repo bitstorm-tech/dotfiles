@@ -33,3 +33,5 @@ window-padding-y = 20
 # theme = TokyoNight
 theme = Gruvbox Dark Hard
 keybind = shift+enter=text:\n
+
+macos-option-as-alt = false
