@@ -436,7 +436,12 @@ require('lazy').setup {
       --    :Mason
       --
       --  You can press `g?` for help in this menu
-      require('mason').setup()
+      require('mason').setup {
+        registries = {
+          'github:mason-org/mason-registry',
+          'github:Crashdummyy/mason-registry',
+        },
+      }
 
       -- Vue: configure vtsls with @vue/typescript-plugin for hybrid mode
       local vue_language_server_path = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server'
@@ -517,6 +522,7 @@ require('lazy').setup {
         astro = { 'prettierd' },
         vue = { 'prettierd' },
         php = { 'pint' },
+        cs = {},
       },
     },
   },
@@ -666,7 +672,7 @@ require('lazy').setup {
 
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'vue' },
+        ensure_installed = { 'bash', 'c', 'c_sharp', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'vue' },
         -- Autoinstall languages that are not installed
         auto_install = true,
         highlight = { enable = true },
