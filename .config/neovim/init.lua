@@ -522,7 +522,7 @@ require('lazy').setup {
         astro = { 'prettierd' },
         vue = { 'prettierd' },
         php = { 'pint' },
-        cs = {},
+        cs = { 'csharpier' },
       },
     },
   },
