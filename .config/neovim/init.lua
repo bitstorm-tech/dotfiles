@@ -717,4 +717,4 @@ require('lazy').setup {
 }
 
 require 'custom.snippets'
-vim.cmd.colorscheme 'gruvbox'
+vim.cmd.colorscheme 'carbonfox'
