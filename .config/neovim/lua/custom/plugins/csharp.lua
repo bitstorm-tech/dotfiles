@@ -1,5 +1,8 @@
 return {
   'seblyng/roslyn.nvim',
   ft = 'cs',
-  opts = {},
+  opts = {
+    broad_search = true,
+    lock_target = true,
+  },
 }
