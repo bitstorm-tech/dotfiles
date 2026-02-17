@@ -4,7 +4,7 @@
 # font-family = Fira Mono
 # font-family = 0xProto Nerd Font Mono
 # font-family = IBM Plex Mono
-# font-family = Monaco
+font-family = Monaco
 # font-family = Red Hat Mono
 # font-family = Source Code Pro
 # font-family = JetBrains Mono
