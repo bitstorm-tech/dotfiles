@@ -11,6 +11,23 @@ return {
         require('nvim-tree.api').tree.open()
       end,
     })
+
+    vim.api.nvim_create_autocmd('BufEnter', {
+      callback = function()
+        if vim.bo.filetype == 'NvimTree' then
+          return
+        end
+
+        local api = require('nvim-tree.api')
+
+        if not api.tree.is_visible() then
+          return
+        end
+
+        api.tree.collapse_all()
+        api.tree.find_file({ open = true, focus = false })
+      end,
+    })
   end,
   opts = {
     view = {
@@ -21,6 +38,10 @@ return {
       open_file = {
         quit_on_open = false,
       },
+    },
+    update_focused_file = {
+      enable = true,
+      update_root = true,
     },
     git = {
       ignore = false,
