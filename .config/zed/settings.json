@@ -8,52 +8,41 @@
 // from the command palette or from `Zed` application menu.
 {
 	"tabs": {
-		"file_icons": true
-	},
-	"show_inline_completions": false,
-	"assistant": {
-		"default_model": {
-			"provider": "copilot_chat",
-			"model": "gpt-4"
-		},
-		"version": "2"
-	},
-	"features": {
-		"copilot": true
+		"file_icons": true,
 	},
 	"vim_mode": true,
 	"theme": {
 		"mode": "system",
 		"light": "Catppuccin Latte",
-		"dark": "New Darcula"
+		"dark": "New Darcula",
 	},
 	"base_keymap": "VSCode",
 	"telemetry": {
 		"diagnostics": false,
-		"metrics": false
+		"metrics": false,
 	},
 	"ui_font_size": 16,
-	"buffer_font_size": 17.5,
+	"buffer_font_size": 17,
 	"buffer_font_features": {
-		"calt": false
+		"calt": false,
 	},
 	"autosave": "on_focus_change",
 	"current_line_highlight": "none",
 	"git": {
 		"inline_blame": {
-			"enabled": false
-		}
+			"enabled": false,
+		},
 	},
 	"indent_guides": {
-		"enabled": false
+		"enabled": false,
 	},
 	"preview_tabs": {
-		"enabled": false
+		"enabled": false,
 	},
 	"hard_tabs": true,
 	"tab_size": 4,
 	"project_panel": {
-		"auto_reveal_entries": false
+		"auto_reveal_entries": false,
 	},
 	"file_scan_exclusions": [
 		".DS_Store",
@@ -64,6 +53,6 @@
 		"node_modules",
 		"dist",
 		"tmp",
-		"_templ.go"
-	]
+		"_templ.go",
+	],
 }
