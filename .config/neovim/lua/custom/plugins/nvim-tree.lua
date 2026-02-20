@@ -5,13 +5,6 @@ return {
   config = function(_, opts)
     require('nvim-tree').setup(opts)
 
-    -- Auto-open nvim-tree on startup
-    vim.api.nvim_create_autocmd('VimEnter', {
-      callback = function()
-        require('nvim-tree.api').tree.open()
-      end,
-    })
-
     vim.api.nvim_create_autocmd('BufEnter', {
       callback = function()
         if vim.bo.filetype == 'NvimTree' then
