@@ -1,10 +1,12 @@
+fork = true
+
 [font]
-size = 18
+size = 16
 # hinting = 'slight'
 
 [[font.normal]]
 # family = "IBM Plex Mono"
-family = "JetBrainsMono Nerd Font"
+family = "JetBrains Mono"
 style = "Light"
 
 [box-drawing]
