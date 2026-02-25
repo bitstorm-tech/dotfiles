@@ -385,6 +385,7 @@ require('lazy').setup {
         },
         -- pyright = {},
         rust_analyzer = {},
+        kotlin_language_server = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -462,6 +463,8 @@ require('lazy').setup {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format lua code
+        'ktlint',
+        'kotlin-language-server',
       })
       require('mason-tool-installer').setup {
         ensure_installed = ensure_installed,
@@ -514,6 +517,7 @@ require('lazy').setup {
         vue = { 'prettierd' },
         php = { 'pint' },
         cs = { 'csharpier' },
+        kotlin = { 'ktlint' },
       },
     },
   },
@@ -663,7 +667,7 @@ require('lazy').setup {
 
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'bash', 'c', 'c_sharp', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'vue' },
+        ensure_installed = { 'bash', 'c', 'c_sharp', 'html', 'kotlin', 'lua', 'markdown', 'vim', 'vimdoc', 'vue' },
         -- Autoinstall languages that are not installed
         auto_install = true,
         highlight = { enable = true },
