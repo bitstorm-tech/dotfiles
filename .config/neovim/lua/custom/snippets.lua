@@ -13,7 +13,3 @@ ls.add_snippets('go', {
   p('zapErrorf', 'zap.L().Sugar().Errorf("$0", err)'),
   p('echoHandler', 'func $1(c echo.Context) error {\n\t$0\n\treturn nil\n}'),
 })
-
-ls.add_snippets('templ', {
-  p('translate', '{ t("$0", lang) }'),
-})

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This is a customized Neovim configuration based on kickstart.nvim with extensive modifications and additional plugins. It's designed for web development with support for Laravel Blade, Go (templ), TypeScript, HTML, CSS, and PHP.
+This is a customized Neovim configuration based on kickstart.nvim with extensive modifications and additional plugins. It's designed for web development with support for Laravel Blade, Go, TypeScript, HTML, CSS, and PHP.
 
 ## Commands
 
@@ -30,7 +30,6 @@ The configuration uses `conform.nvim` for formatting with the following formatte
 - Lua: `stylua`
 - JavaScript/TypeScript: `prettierd`
 - Go: `gopls`
-- templ: `templ` + `prettierd`
 - PHP: `pint`
 - Blade: `prettierd`
 
@@ -66,7 +65,7 @@ Custom plugins are modularized in `lua/custom/plugins/`:
 - Development: autopairs, emmet, multicursors, indent_line
 
 ### Language Support
-- **Go**: gopls LSP, templ support for Go templating
+- **Go**: gopls LSP
 - **Web Development**: HTML, CSS, JavaScript/TypeScript with prettierd formatting
 - **Laravel**: Blade template support with custom treesitter parser and comment configuration
 - **PHP**: Intelephense LSP, Laravel Pint formatter

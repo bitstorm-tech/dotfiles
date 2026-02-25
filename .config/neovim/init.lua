@@ -1,7 +1,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.filetype.add { extension = { templ = 'templ' } }
 -- require 'custom.autocmd'
 require 'custom.options'
 require 'custom.keymaps'
@@ -368,18 +367,11 @@ require('lazy').setup {
       local servers = {
         -- clangd = {},
         gopls = {},
-        templ = {},
-        htmx = {
-          filetypes = { 'html', 'templ' },
-        },
-        html = {
-          filetypes = { 'html', 'templ' },
-        },
+        htmx = {},
+        html = {},
         vtsls = {},
         vue_ls = {},
-        cssls = {
-          filetypes = { 'html', 'templ' },
-        },
+        cssls = {},
         eslint = {
           filetypes = { 'html', 'typescript', 'javascript', 'typescriptreact', 'javascriptreact', 'vue' },
         },
@@ -515,7 +507,6 @@ require('lazy').setup {
         html = { 'prettierd' },
         json = { 'prettierd' },
         go = { 'gopls' },
-        templ = { 'templ', 'prettierd' },
         yaml = { 'yamlls' },
         yml = { 'yamlls' },
         sh = { 'bashls' },
