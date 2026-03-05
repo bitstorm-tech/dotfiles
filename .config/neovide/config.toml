@@ -7,7 +7,7 @@ size = 16
 [[font.normal]]
 # family = "IBM Plex Mono"
 family = "JetBrains Mono"
-style = "Light"
+# style = "Light"
 
 [box-drawing]
 mode = "native"
