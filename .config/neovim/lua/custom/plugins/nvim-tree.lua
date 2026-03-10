@@ -41,21 +41,11 @@ return {
       enable = true,
     },
     renderer = {
+      highlight_git = 'icon',
       icons = {
         show = {
           folder_arrow = false,
-          git = true,
-        },
-        glyphs = {
-          git = {
-            unstaged = '~',
-            staged = '',
-            unmerged = '',
-            renamed = '',
-            untracked = '★',
-            deleted = '',
-            ignored = '',
-          },
+          git = false,
         },
       },
     },
