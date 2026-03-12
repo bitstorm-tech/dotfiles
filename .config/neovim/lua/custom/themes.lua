@@ -49,7 +49,12 @@ return {
   },
   {
     'catppuccin/nvim',
+    name = 'catppuccin',
+    lazy = false,
     priority = 1000,
+    opts = {
+      flavour = 'frappe', -- wird beim Start via vim.cmd.colorscheme überschrieben
+    },
   },
   {
     'ellisonleao/gruvbox.nvim',
