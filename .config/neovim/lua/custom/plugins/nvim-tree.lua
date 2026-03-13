@@ -1,35 +1,31 @@
 return {
   'nvim-tree/nvim-tree.lua',
-  lazy = false, -- Load immediately for auto-open
+  lazy = false,
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function(_, opts)
     require('nvim-tree').setup(opts)
-
-    vim.api.nvim_create_autocmd('BufEnter', {
-      callback = function()
-        if vim.bo.filetype == 'NvimTree' then
-          return
-        end
-
-        local api = require('nvim-tree.api')
-
-        if not api.tree.is_visible() then
-          return
-        end
-
-        api.tree.collapse_all()
-        api.tree.find_file({ open = true, focus = false })
-      end,
-    })
   end,
   opts = {
     view = {
       adaptive_size = true,
-      side = 'left',
+      float = {
+        enable = true,
+        quit_on_focus_loss = true,
+        open_win_config = function()
+          return {
+            relative = 'editor',
+            border = 'rounded',
+            width = 40,
+            height = vim.o.lines - vim.o.cmdheight - 2,
+            row = 0,
+            col = 0,
+          }
+        end,
+      },
     },
     actions = {
       open_file = {
-        quit_on_open = false,
+        quit_on_open = true,
       },
     },
     update_focused_file = {
