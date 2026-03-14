@@ -50,5 +50,6 @@
 ;; (unpin! t)
 
 (package! evil-terminal-cursor-changer)
+(package! catppuccin-theme)
 (package! lsp-tailwindcss)
 (package! astro-ts-mode)
