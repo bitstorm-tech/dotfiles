@@ -32,7 +32,15 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+;; Auto dark/light theme based on macOS appearance
+(setq catppuccin-flavor
+      (if (string= (string-trim
+                    (shell-command-to-string
+                     "defaults read -g AppleInterfaceStyle 2>/dev/null"))
+                   "Dark")
+          'frappe
+        'latte))
+(setq doom-theme 'catppuccin)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -77,18 +85,32 @@
 (use-package! evil-terminal-cursor-changer
   :hook (tty-setup . evil-terminal-cursor-changer-activate))
 
+;; Enable auto-save and backups
 (setq auto-save-default t
       make-backup-files t)
 
+;; Skip quit confirmation
 (setq confirm-kill-emacs nil)
 
+;; Disable line highlighting
 (setq global-hl-line-modes nil)
 
-(setq which-key-idle-delay 0.25)
+;; Faster which-key popup
+(setq which-key-idle-delay 0.2)
 
+;; Use Cmd as Meta on macOS
 (setq mac-command-modifier 'meta)
 
-(setq treesit-language-source-alist
-      '((astro "https://github.com/virchau13/tree-sitter-astro")
-        (css "https://github.com/tree-sitter/tree-sitter-css")
-        (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")))
+;; .NET SDK path (Homebrew/Apple Silicon)
+(setenv "DOTNET_ROOT" "/opt/homebrew/opt/dotnet/libexec")
+
+;; Register Vue files with LSP
+(after! lsp-mode
+  (add-to-list 'lsp-language-id-configuration '("\\.vue$" . "vue")))
+
+;; Tailwind CSS LSP as add-on mode
+(setq lsp-tailwindcss-add-on-mode t)
+
+(after! lsp-tailwindcss
+  (setq lsp-tailwindcss-server-path
+        (executable-find "tailwindcss-language-server")))
