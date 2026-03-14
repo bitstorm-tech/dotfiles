@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "WebSearch",
+      "WebFetch(domain:docs.doomemacs.org)",
+      "WebFetch(domain:github.com)"
     ]
   }
 }

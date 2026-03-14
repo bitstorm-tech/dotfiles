@@ -98,6 +98,11 @@
 ;; Faster which-key popup
 (setq which-key-idle-delay 0.2)
 
+;; Treemacs: unlock width for manual resizing
+(after! treemacs
+  (setq treemacs-width 40
+        treemacs-width-is-initially-locked nil))
+
 ;; Use Cmd as Meta on macOS
 (setq mac-command-modifier 'meta)
 
