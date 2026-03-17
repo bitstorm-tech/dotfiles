@@ -5,7 +5,8 @@
       "Bash(find:*)",
       "WebSearch",
       "WebFetch(domain:docs.doomemacs.org)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(brew info:*)"
     ]
   }
 }
