@@ -100,7 +100,7 @@
 
 ;; Treemacs: unlock width for manual resizing
 (after! treemacs
-  (setq treemacs-width 40
+  (setq treemacs-width 60
         treemacs-width-is-initially-locked nil))
 
 ;; Use Cmd as Meta on macOS
