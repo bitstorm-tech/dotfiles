@@ -33,14 +33,14 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;; Auto dark/light theme based on macOS appearance
-(setq catppuccin-flavor
-      (if (string= (string-trim
-                    (shell-command-to-string
-                     "defaults read -g AppleInterfaceStyle 2>/dev/null"))
-                   "Dark")
-          'frappe
-        'latte))
-(setq doom-theme 'catppuccin)
+;; (setq catppuccin-flavor
+;;       (if (string= (string-trim
+;;                     (shell-command-to-string
+;;                      "defaults read -g AppleInterfaceStyle 2>/dev/null"))
+;;                    "Dark")
+;;           'frappe
+;;         'latte))
+(setq doom-theme 'doom-material-dark)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
