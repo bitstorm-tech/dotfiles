@@ -26,14 +26,14 @@ window-padding-y = 10
 # theme = nightfox
 # theme = catppuccin-frappe
 # theme = catppuccin-mocha
-# theme = MaterialDarker
+theme = dark:Material Darker,light:Material
 # theme = Operator Mono Dark
 # theme = nordfox
 # theme = Kanagawa Dragon
 # theme = TokyoNight
 # theme = Gruvbox Dark Hard
 # theme = dark:Carbonfox,light:Gruvbox Light Hard
-theme = dark:Catppuccin Frappe,light: Catppuccin Latte
+# theme = dark:Catppuccin Frappe,light: Catppuccin Latte
 keybind = shift+enter=text:\n
 
 macos-option-as-alt = false
