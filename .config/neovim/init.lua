@@ -725,8 +725,9 @@ end
 
 if is_dark_mode() then
   vim.o.background = 'dark'
-  vim.cmd.colorscheme 'catppuccin-frappe'
+  vim.g.material_style = 'darker'
 else
   vim.o.background = 'light'
-  vim.cmd.colorscheme 'catppuccin-latte'
+  vim.g.material_style = 'lighter'
 end
+vim.cmd.colorscheme 'material'
