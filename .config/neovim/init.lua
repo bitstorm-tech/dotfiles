@@ -7,6 +7,16 @@ require 'custom.keymaps'
 require 'custom.commands'
 require 'custom.neovide'
 
+vim.filetype.add {
+  filename = {
+    ['project.godot'] = 'gdresource',
+  },
+  extension = {
+    gdshader = 'gdshader',
+    gdshaderinc = 'gdshaderinc',
+  },
+}
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
@@ -366,6 +376,8 @@ require('lazy').setup {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         -- clangd = {},
+        gdscript = {},
+        gdshader_lsp = {},
         gopls = {},
         htmx = {},
         html = {},
@@ -460,8 +472,11 @@ require('lazy').setup {
 
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
-      local ensure_installed = vim.tbl_keys(servers or {})
+      local ensure_installed = vim.tbl_filter(function(server_name)
+        return not vim.tbl_contains({ 'gdscript', 'gdshader_lsp' }, server_name)
+      end, vim.tbl_keys(servers or {}))
       vim.list_extend(ensure_installed, {
+        'gdtoolkit',
         'stylua', -- Used to format lua code
         'ktlint',
         'kotlin-language-server',
@@ -516,6 +531,7 @@ require('lazy').setup {
         astro = { 'prettierd' },
         vue = { 'prettierd' },
         php = { 'pint' },
+        gdscript = { 'gdformat' },
         cs = { 'csharpier' },
         kotlin = { 'ktlint' },
       },
@@ -667,7 +683,7 @@ require('lazy').setup {
 
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'bash', 'c', 'c_sharp', 'html', 'kotlin', 'lua', 'markdown', 'vim', 'vimdoc', 'vue' },
+        ensure_installed = { 'bash', 'c', 'c_sharp', 'gdscript', 'gdshader', 'godot_resource', 'html', 'kotlin', 'lua', 'markdown', 'vim', 'vimdoc', 'vue' },
         -- Autoinstall languages that are not installed
         auto_install = true,
         highlight = { enable = true },
