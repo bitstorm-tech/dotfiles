@@ -123,7 +123,7 @@ require('lazy').setup {
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
-    branch = '0.1.x',
+    tag = 'v0.2.2',
     dependencies = {
       'nvim-lua/plenary.nvim',
       { -- If encountering errors, see telescope-fzf-native README for install instructions
@@ -680,15 +680,7 @@ require('lazy').setup {
     build = ':TSUpdate',
     config = function()
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-
-      ---@diagnostic disable-next-line: missing-fields
-      require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'bash', 'c', 'c_sharp', 'gdscript', 'gdshader', 'godot_resource', 'html', 'kotlin', 'lua', 'markdown', 'vim', 'vimdoc', 'vue' },
-        -- Autoinstall languages that are not installed
-        auto_install = true,
-        highlight = { enable = true },
-        indent = { enable = true },
-      }
+      require('custom.treesitter').setup { 'bash', 'c', 'c_sharp', 'gdscript', 'gdshader', 'godot_resource', 'html', 'kotlin', 'lua', 'markdown', 'vim', 'vimdoc', 'vue' }
 
       -- There are additional nvim-treesitter modules that you can use to interact
       -- with nvim-treesitter. You should go explore a few and see what interests you:
