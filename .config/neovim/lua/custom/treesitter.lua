@@ -3,6 +3,7 @@ local M = {}
 local nvim_treesitter = require 'nvim-treesitter'
 
 local group = vim.api.nvim_create_augroup('custom-treesitter', { clear = true })
+local supported_languages
 
 local function get_lang(filetype)
   if not filetype or filetype == '' then
@@ -10,6 +11,11 @@ local function get_lang(filetype)
   end
 
   return vim.treesitter.language.get_lang(filetype) or filetype
+end
+
+local function is_supported(lang)
+  supported_languages = supported_languages or nvim_treesitter.get_available()
+  return vim.tbl_contains(supported_languages, lang)
 end
 
 local function has_parser(lang)
@@ -31,6 +37,10 @@ local function enable_features(bufnr)
   end
 
   if not has_parser(lang) then
+    if not is_supported(lang) then
+      return
+    end
+
     nvim_treesitter.install(lang)
     return
   end
