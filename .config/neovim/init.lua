@@ -105,7 +105,8 @@ require('lazy').setup {
         { '<leader>w', desc = '[W]orkspace' },
         { '<leader>b', desc = '[B]uffer' },
         { '<leader>l', desc = '[L]azy' },
-        { '<leader>t', desc = '[T]heme' },
+        { '<leader>t', desc = '[T]erminal' },
+        { '<leader>T', desc = '[T]heme' },
         { '<leader>g', desc = '[G]it' },
       }
     end,
@@ -715,22 +716,4 @@ require('lazy').setup {
 }
 
 require 'custom.snippets'
--- System-Dark/Light-Mode erkennen (macOS)
-local function is_dark_mode()
-  local handle = io.popen 'defaults read -g AppleInterfaceStyle 2>/dev/null'
-  if handle then
-    local result = handle:read '*a'
-    handle:close()
-    return result:match 'Dark' ~= nil
-  end
-  return true -- Fallback: dark
-end
-
-if is_dark_mode() then
-  vim.o.background = 'dark'
-  vim.g.material_style = 'darker'
-else
-  vim.o.background = 'light'
-  vim.g.material_style = 'lighter'
-end
-vim.cmd.colorscheme 'material'
+require('custom.theme_mode').setup()
