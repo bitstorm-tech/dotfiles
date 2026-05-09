@@ -34,6 +34,9 @@ function copytoclipboard {
 	cat $1 | pbcopy 
 	echo "Copied $1 content to clipboard"
 }
+function gwa {
+	git worktree add .worktrees/$1 -b $1
+}
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # eval "$(zoxide init --cmd cd zsh)"
