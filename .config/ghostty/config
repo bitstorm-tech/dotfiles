@@ -18,7 +18,7 @@ adjust-cell-height = 25%
 
 shell-integration-features = no-cursor
 cursor-style = block
-# cursor-style-blink = false
+cursor-style-blink = true
 
 # window-padding-x = 10
 window-padding-y = 10
