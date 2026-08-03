@@ -24,7 +24,8 @@ cursor-style-blink = true
 # window-padding-x = 10
 window-padding-y = 10
 
-theme = dark:Material Darker,light:Raycast Light
+# theme = dark:Material Darker,light:Raycast Light
+theme = Material Darker
 
 keybind = shift+enter=text:\n
 
